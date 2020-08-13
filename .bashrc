@@ -51,7 +51,7 @@ esac
 # should be on the output of commands, not on the prompt
 force_color_prompt=yes
 
-source ~/working-copy/test-farm/test-farm/util/toys/test-farm-helpers
+#source ~/working-copy/test-farm/test-farm/util/toys/test-farm-helpers
 
 if [ -n "$force_color_prompt" ]; then
     if [ -x /usr/bin/tput ] && tput setaf 1 >&/dev/null; then
@@ -146,10 +146,11 @@ timeout() {
 
 }
 #export PS1="\u@\h \[\033[32m\]\w\[\033[33m\]\$(parse_git_branch)\[\033[00m\] $ " 
-PATH="/home/<user>/perl5/bin${PATH:+:${PATH}}"; export PATH;
-PERL5LIB="/home/<user>/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"; export PERL5LIB;
-PERL_LOCAL_LIB_ROOT="/home/<user>/perl5${PERL_LOCAL_LIB_ROOT:+:${PERL_LOCAL_LIB_ROOT}}"; export PERL_LOCAL_LIB_ROOT;
-PERL_MB_OPT="--install_base \"/home/<user>/perl5\""; export PERL_MB_OPT;
-PERL_MM_OPT="INSTALL_BASE=/home/<user>/perl5"; export PERL_MM_OPT;
+#PATH="/home/<user>/perl5/bin${PATH:+:${PATH}}"; export PATH;
+export PATH;
+#PERL5LIB="/home/<user>/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"; export PERL5LIB;
+#PERL_LOCAL_LIB_ROOT="/home/<user>/perl5${PERL_LOCAL_LIB_ROOT:+:${PERL_LOCAL_LIB_ROOT}}"; export PERL_LOCAL_LIB_ROOT;
+#PERL_MB_OPT="--install_base \"/home/<user>/perl5\""; export PERL_MB_OPT;
+#PERL_MM_OPT="INSTALL_BASE=/home/<user>/perl5"; export PERL_MM_OPT;
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
